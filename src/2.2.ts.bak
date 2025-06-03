@@ -1,0 +1,30 @@
+{
+    type User1 = {
+        name:string;
+        id:number;
+    }
+
+    type NewUser1 = User1 & {role:string}
+
+    const user1:NewUser1 = {
+        name:"boss dipto",
+        id:1,
+        role:'he is the boss boss boss.'
+    }
+
+    interface User2 {
+         name:string;
+        id:number;
+    }
+
+    interface NewUser2 extends User2 {
+        role:string
+    }
+
+    const user2:NewUser2 ={
+        name:'Arafat',
+        id:456,
+        role:"HR"
+    }
+
+}

@@ -1,4 +1,15 @@
 <?php
+
+
+
+
+
+
+
+
+
+
+
 function custom_redirect_pages()
 {
     if (is_page('checkout') || is_page('prehlad-cenovej-ponuky')) {

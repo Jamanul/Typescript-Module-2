@@ -20,7 +20,7 @@
 
     type CustomError ={
         message:string
-    }
+    } 
 
     try {
         

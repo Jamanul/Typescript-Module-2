@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // const megaMenu = document.querySelector(".mega-menu-container");
+    // let isMouseEnter = false;
+    // megaMenu.addEventListener("mouseenter", () => {
+    //   isMouseEnter = true;
+    // });
+    // if (isMouseEnter) {
+    //   megaMenu.addEventListener("mouseleave", () => {
+    //     const innerContainer = document.querySelector(
+    //       ".nav-menu .e-n-menu-content.e-active"
+    //     );
+    //     const innerContainerOne = document.querySelector(
+    //       ".nav-menu .e-n-menu-content.e-active .e-con-boxed"
+    //     );
+
+    //     innerContainer.classList.remove("e-active");
+    //     innerContainerOne.classList.remove("e-active");
+    //     isMouseEnter = false;
+    //   });
+    // }
+  </script>
+
+  <script>
+    const megaMenu = document.querySelector(".mega-menu-container");
+    const serviceButton = document.getElementById("menu-services");
+    serviceButton.addEventListener("mouseenter", () => {
+      const innerContainer = document.querySelector(
+        ".nav-menu .e-n-menu-content"
+      );
+      if (innerContainer) {
+        innerContainer.style.display = "flex";
+      }
+    });
+
+    megaMenu.addEventListener("mouseleave", () => {
+      console.log("Mouse left mega menu");
+
+      const innerContainer = document.querySelector(
+        ".nav-menu .e-n-menu-content"
+      );
+
+      if (innerContainer) {
+        innerContainer.style.display = "none";
+      }
+    });
+  </script>
+
+  <script>
+    const seo = document.getElementById("seo");
+    const seoContainer = document.getElementById("seoContainer");
+    const ppc = document.getElementById("ppc");
+    const ppcContainer = document.getElementById("ppcContainer");
+    const smm = document.getElementById("smm");
+    const smmContainer = document.getElementById("smmContainer");
+    const brand = document.getElementById("brand");
+    const brandContainer = document.getElementById("brandContainer");
+    const defaultImg = document.getElementById("default-img");
+
+    const showImage = (image, elementContainer) => {
+      elementContainer.addEventListener("mouseenter", () => {
+        defaultImg.classList.add("default-image-hide");
+        image.classList.add("mega-menu-image-active");
+      });
+      elementContainer.addEventListener("mouseleave", () => {
+        defaultImg.classList.remove("default-image-hide");
+        image.classList.remove("mega-menu-image-active");
+      });
+    };
+
+    showImage(seo, seoContainer);
+    showImage(ppc, ppcContainer);
+    showImage(smm, smmContainer);
+    showImage(brand, brandContainer);
+  </script>
+</html>
